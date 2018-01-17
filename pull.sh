@@ -6,7 +6,7 @@ curl -LO https://raw.githubusercontent.com/mclarkson/JSONPath.sh/master/JSONPath
 chmod +x JSONPath.sh
 mv -f JSONPath.sh ~bin
 
-imageRepos=`curl https://api.github.com/orgs/googlecontainers/repos?access_token=c5c1f398f5a9cd580b3d4b0b949490e5831c86a5 | JSONPath.sh '.[*].name' -b`
+imageRepos=`curl https://api.github.com/orgs/googlecontainers/repos?access_token=d05fcaa90b07efc63f116fc503ef5fbe18485826 | JSONPath.sh '.[*].name' -b`
 
 for repo in $imageRepos;
 do
