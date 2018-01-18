@@ -10,6 +10,9 @@ imageRepos=`curl https://api.github.com/orgs/googlecontainers/repos?access_token
 
 for repo in $imageRepos;
 do
+  if ["$repo" -eq "kubernetes-support"];then
+    continue
+  fi
   git clone "https://github.com/googlecontainers/"$repo".git"
   cd $repo
   tags=`git tag`
